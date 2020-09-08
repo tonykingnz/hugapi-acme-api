@@ -1,0 +1,3 @@
+class APICustomError(Exception):
+    pass
+
