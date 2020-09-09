@@ -12,9 +12,9 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1599587874,,"wq"
+|2,0,1599669244,,"wq"
 :q
-|2,0,1599586595,,"q"
+|2,0,1599667482,,"q"
 :Wq
 |2,0,1599586490,,"Wq"
 :q!
@@ -29,232 +29,277 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+"1	LINE	0
+	from config import config
+|3,0,1,1,1,0,1599668412,"from config import config"
+""-	CHAR	0
+	,
+|3,1,36,0,1,0,1599668766,","
 
 # File marks:
-'0  5  120  ~/storeRepository.py
-|4,48,5,120,1599587874,"~/storeRepository.py"
-'1  4  75  ~/storeService.py
-|4,49,4,75,1599587773,"~/storeService.py"
-'2  7  9  ~/app.py
-|4,50,7,9,1599587681,"~/app.py"
-'3  6  136  ~/app.py
-|4,51,6,136,1599587652,"~/app.py"
-'4  7  69  ~/app.py
-|4,52,7,69,1599587652,"~/app.py"
-'5  8  7  ~/storeService.py
-|4,53,8,7,1599586680,"~/storeService.py"
-'6  7  7  ~/storeService.py
-|4,54,7,7,1599586680,"~/storeService.py"
-'7  12  25  ~/app.py
-|4,55,12,25,1599586595,"~/app.py"
-'8  11  25  ~/app.py
-|4,56,11,25,1599586595,"~/app.py"
-'9  11  25  ~/app.py
-|4,57,11,25,1599586595,"~/app.py"
+'0  4  0  ~/connect.py
+|4,48,4,0,1599669244,"~/connect.py"
+'1  7  39  ~/connect.py
+|4,49,7,39,1599669016,"~/connect.py"
+'2  6  39  ~/connect.py
+|4,50,6,39,1599669016,"~/connect.py"
+'3  33  101  ~/connect.py
+|4,51,33,101,1599668775,"~/connect.py"
+'4  33  101  ~/connect.py
+|4,52,33,101,1599668775,"~/connect.py"
+'5  32  101  ~/connect.py
+|4,53,32,101,1599668775,"~/connect.py"
+'6  32  101  ~/connect.py
+|4,54,32,101,1599668775,"~/connect.py"
+'7  8  0  ~/connect.py
+|4,55,8,0,1599668743,"~/connect.py"
+'8  8  0  ~/connect.py
+|4,56,8,0,1599668743,"~/connect.py"
+'9  8  0  ~/connect.py
+|4,57,8,0,1599668743,"~/connect.py"
 
 # Jumplist (newest first):
--'  5  120  ~/storeRepository.py
-|4,39,5,120,1599587874,"~/storeRepository.py"
--'  1  0  ~/storeRepository.py
-|4,39,1,0,1599587853,"~/storeRepository.py"
--'  4  75  ~/storeService.py
-|4,39,4,75,1599587773,"~/storeService.py"
--'  4  75  ~/storeService.py
-|4,39,4,75,1599587773,"~/storeService.py"
--'  8  7  ~/storeService.py
-|4,39,8,7,1599587704,"~/storeService.py"
--'  8  7  ~/storeService.py
-|4,39,8,7,1599587704,"~/storeService.py"
--'  7  9  ~/app.py
-|4,39,7,9,1599587681,"~/app.py"
--'  7  9  ~/app.py
-|4,39,7,9,1599587681,"~/app.py"
--'  7  9  ~/app.py
-|4,39,7,9,1599587681,"~/app.py"
--'  7  9  ~/app.py
-|4,39,7,9,1599587681,"~/app.py"
--'  6  136  ~/app.py
-|4,39,6,136,1599587660,"~/app.py"
--'  6  136  ~/app.py
-|4,39,6,136,1599587660,"~/app.py"
--'  6  136  ~/app.py
-|4,39,6,136,1599587660,"~/app.py"
--'  6  136  ~/app.py
-|4,39,6,136,1599587660,"~/app.py"
--'  7  69  ~/app.py
-|4,39,7,69,1599587652,"~/app.py"
--'  7  69  ~/app.py
-|4,39,7,69,1599587652,"~/app.py"
--'  7  69  ~/app.py
-|4,39,7,69,1599587652,"~/app.py"
--'  7  69  ~/app.py
-|4,39,7,69,1599587652,"~/app.py"
--'  12  25  ~/app.py
-|4,39,12,25,1599587561,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599587561,"~/app.py"
--'  12  25  ~/app.py
-|4,39,12,25,1599587561,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599587561,"~/app.py"
--'  12  25  ~/app.py
-|4,39,12,25,1599587561,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599587561,"~/app.py"
--'  12  25  ~/app.py
-|4,39,12,25,1599587561,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599587561,"~/app.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  7  7  ~/storeService.py
-|4,39,7,7,1599586680,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  1  0  ~/storeService.py
-|4,39,1,0,1599586601,"~/storeService.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  11  25  ~/app.py
-|4,39,11,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586595,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  10  25  ~/app.py
-|4,39,10,25,1599586505,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  1  16  ~/app.py
-|4,39,1,16,1599586494,"~/app.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
--'  3  0  ~/exceptions.py
-|4,39,3,0,1599586491,"~/exceptions.py"
+-'  4  0  ~/connect.py
+|4,39,4,0,1599669244,"~/connect.py"
+-'  7  39  ~/connect.py
+|4,39,7,39,1599669221,"~/connect.py"
+-'  6  39  ~/connect.py
+|4,39,6,39,1599669016,"~/connect.py"
+-'  33  101  ~/connect.py
+|4,39,33,101,1599668932,"~/connect.py"
+-'  32  101  ~/connect.py
+|4,39,32,101,1599668932,"~/connect.py"
+-'  32  101  ~/connect.py
+|4,39,32,101,1599668775,"~/connect.py"
+-'  8  0  ~/connect.py
+|4,39,8,0,1599668751,"~/connect.py"
+-'  7  0  ~/connect.py
+|4,39,7,0,1599668751,"~/connect.py"
+-'  7  0  ~/connect.py
+|4,39,7,0,1599668751,"~/connect.py"
+-'  7  0  ~/connect.py
+|4,39,7,0,1599668743,"~/connect.py"
+-'  2  0  ~/connect.py
+|4,39,2,0,1599668421,"~/connect.py"
+-'  2  0  ~/connect.py
+|4,39,2,0,1599668421,"~/connect.py"
+-'  2  0  ~/connect.py
+|4,39,2,0,1599668421,"~/connect.py"
+-'  2  0  ~/connect.py
+|4,39,2,0,1599668421,"~/connect.py"
+-'  2  0  ~/connect.py
+|4,39,2,0,1599668415,"~/connect.py"
+-'  1  0  ~/connect.py
+|4,39,1,0,1599668410,"~/connect.py"
+-'  1  0  ~/connect.py
+|4,39,1,0,1599668410,"~/connect.py"
+-'  1  0  ~/connect.py
+|4,39,1,0,1599668410,"~/connect.py"
+-'  1  0  ~/connect.py
+|4,39,1,0,1599668410,"~/connect.py"
+-'  1  0  ~/connect.py
+|4,39,1,0,1599668410,"~/connect.py"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  1  0  /tmp/psql.edit.32.sql
+|4,39,1,0,1599667482,"/tmp/psql.edit.32.sql"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
+-'  4  47  ~/storeService.py
+|4,39,4,47,1599665739,"~/storeService.py"
 
 # History of marks within files (newest to oldest):
+
+> ~/connect.py
+	*	1599669232	0
+	"	4	0
+	^	4	0
+	.	3	13
+	+	2	0
+	+	3	0
+	+	6	40
+	+	5	38
+	+	6	41
+	+	9	0
+	+	7	60
+	+	8	0
+	+	33	101
+	+	6	26
+	+	7	40
+	+	3	13
+
+> /tmp/psql.edit.32.sql
+	*	1599667479	0
+	"	1	0
+
+> ~/storeService.py
+	*	1599665737	0
+	"	4	47
+	^	4	48
+	.	4	47
+	+	7	7
+	+	9	80
+	+	10	11
+	+	11	0
+	+	7	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	8	0
+	+	7	75
+	+	4	47
 
 > ~/storeRepository.py
 	*	1599587873	0
@@ -262,22 +307,6 @@
 	^	5	121
 	.	5	120
 	+	5	120
-
-> ~/storeService.py
-	*	1599587771	0
-	"	4	75
-	^	4	76
-	.	4	75
-	+	4	7
-	+	6	80
-	+	7	11
-	+	8	0
-	+	4	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	5	0
-	+	4	75
 
 > ~/app.py
 	*	1599587680	0
