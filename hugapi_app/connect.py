@@ -39,7 +39,7 @@ def connect():
         
         #Create row
         cur.execute("INSERT INTO store(name, address, store_id) VALUES ({0},{1},{2});".format(name,address,store_id))
-        stutus_confirmation= cur.fetchone()
+        status_confirmation= cur.fetchone()
         print(status_confirmation)
 
         #Check created row
