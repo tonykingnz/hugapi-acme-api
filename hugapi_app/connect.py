@@ -1,18 +1,8 @@
 import psycopg2
 from configparser import ConfigParser
-import xxhash
-import random
-from datetime import datetime
 
-name = "'Test name create row sadasdsdas'"
+name = "'Test name cresdate row sadasasdf3sdsdas'"
 address = "'Test address st 3294u23ohrwekidsad'"
-
-actual_date = datetime.now()
-actual_date = int(actual_date.strftime('%Y%m%d%H%M%s%f'))
-
-store_id = xxhash.xxh64(name+address, seed=actual_date*random.randint(0,1024)).hexdigest()
-store_id = "'{0}'".format(store_id)
-print(store_id)
 
 def config(filename='database.ini', section='postgresql'):
     parser = ConfigParser()
@@ -38,14 +28,15 @@ def connect():
         cur = conn.cursor()
         
         #Create row
-        cur.execute("INSERT INTO store(name, address, store_id) VALUES ({0},{1},{2});".format(name,address,store_id))
-        status_confirmation= cur.fetchone()
-        print(status_confirmation)
+        cur.execute("INSERT INTO store(name, address) VALUES (%s,%s) RETURNING store_id;", (name,address))
+        store_id = cur.fetchone()
+        print(store_id[0])
 
         #Check created row
         cur.execute("SELECT %s FROM store;", store_id)
         creation_confirmation = cur.fetchone()
-        print(creation_confirmation)
+        message_confirmation = "The store id is: "
+        print(message_confirmation+str(creation_confirmation[0]))
 
         cur.execute("SELECT version();")
         db_version = cur.fetchone()
