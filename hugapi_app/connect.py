@@ -1,8 +1,8 @@
 import psycopg2
 from configparser import ConfigParser
 
-name = "'Test name cresdate row sadasasdf3sdsdas'"
-address = "'Test address st 3294u23ohrwekidsad'"
+#name = "'Test name cresdate row sadasasdf3sdsdas'"
+#address = "'Test address st 3294u23ohrwekidsad'"
 
 def config(filename='database.ini', section='postgresql'):
     parser = ConfigParser()
@@ -19,7 +19,7 @@ def config(filename='database.ini', section='postgresql'):
 
     return db
     
-def connect():
+def connect(name, address):
     conn = None
     try:
         #Config conection
@@ -54,4 +54,4 @@ def connect():
             print('Database connection closed.')
 
 if __name__ == '__main__':
-    connect()
+    connect("'Test create 741100920202'", "'random addres 3489hf3bf4i3'")

@@ -12,8 +12,9 @@ def listStore(nameTerm, addressTerm, pageSize, pageIndex, orderBy):
 #    except APICustomError as e:
 #        return ("bad request", 400)
 
-#@hug.post()
-#serviceStore.create(nameStore, addressStore)
+@hug.post('/stores', examples='name=Testing%20like%20crazy824y3ru2i3b328937894&address=fictiona%20street%202000')
+def createStore(name, address):
+    return storeService.create(name, address)
 
-#@hug.put()
+#@hug.put()'
 #serviceStore.update(nameStore, addressStore)
