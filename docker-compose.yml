@@ -4,7 +4,7 @@ services:
     hugapi_workspace:
         image: tonykingnz/hugapi-workspace:3.8.5-buster
         volumes:
-            - ./hugapi_app:/root
+            - ./:/root
               #- ./hugapi_workspace:root #dont work two at same place  
         ports:
             - 8000:8000
