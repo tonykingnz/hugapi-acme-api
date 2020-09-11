@@ -28,7 +28,7 @@ def connect(name, address):
         cur = conn.cursor()
         
         #Create row
-        cur.execute("INSERT INTO store(name, address) VALUES (%s,%s) RETURNING store_id;", (name,address))
+        cur.execute("INSERT INTO store(name, address) VALUES (%s,%s) RETURNING store_id", (name,address))
         store_id = cur.fetchone()
         print(store_id[0])
 
@@ -47,11 +47,10 @@ def connect(name, address):
 
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
+        raise
 
     finally:
         if conn is not None:
             conn.close()
             print('Database connection closed.')
 
-if __name__ == '__main__':
-    connect("'Test create 741100920202'", "'random addres 3489hf3bf4i3'")
