@@ -5,7 +5,7 @@ class DatabaseConnection:
     def __init__(self):
         try:
             self.connection = psycopg2.connect(
-                "dbname='postgresdemo' user='hoangnd' host='localhost' password='123456' port='5432'")
+                "dbname='acme-db' user='postgres' host='hug-acme-api-store_acme-db-postgres_1' password='postgres' port='5432'")
             self.connection.autocommit = True
             self.cursor = self.connection.cursor()
         except:
@@ -37,11 +37,11 @@ class DatabaseConnection:
 
 if __name__== '__main__':
     database_connection = DatabaseConnection()
-    # database_connection.create_table()
+    database_connection.create_table()
     # database_connection.insert_new_record()
     # database_connection.query_all()
     # database_connection.update_record()
-    database_connection.drop_table()
+    # database_connection.drop_table()
 
 
 
