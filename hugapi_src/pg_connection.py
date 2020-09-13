@@ -19,21 +19,25 @@ def config(filename='database.ini', section='postgresql'):
 
     return db
 
-class PgConnection():
+class EntityManager():
     def __init__(self):
-        connection = None
+        params = config()
+        self.connection = psycopg2.connect(**params)
+        self.connection.autocommit = True
+    
+    def executeQuery(self, query, params):
+        cursor = None
         try:
-            self.params = config()
-            self.connection = psycopg2.connect(**params)
-            self.connection.autocommit = True
-            self.cursor = self.connection.cursor()
-        except:
-            print("Cannot connect to database")
+            print(query)
+            print(params)
+            cursor = self.connection.cursor()
+            cursor.execute(query, params)
+            return cursor.fetchone()
+        finally:
+            if cursor is not None:
+                cursor.close()
 
     def create(self, nameStore, addressStore):
-        createQuery = ("INSERT INTO store(name, address) VALUES (%s,%s,%s) RETURNING store_id", (nameStore, addressStore))
-        self.cursor.execute(createQuery)
+        cursor = self.connection.cursor()
+        cursor.execute("INSERT INTO store(name, address) VALUES (%s,%s) RETURNING store_id", (nameStore, addressStore))
 
-if __name__ == '__main__':
-    pgConnection = PgConnection()
-    pgConnection.create(nameStore, addressStore)

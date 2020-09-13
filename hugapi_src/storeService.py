@@ -1,11 +1,8 @@
 import storeRepository
 
 def create(name, address):
-    return storeRepository.create(name, address)
+    response = storeRepository.create(name, address)
+    return response[0]
 
-def list(name, address, pageSize=20, pageIndex=1, orderBy='name asc'):
+def list(name, address, pageSize, pageIndex, orderBy):
     return storeRepository.list(name, address, pageSize, pageIndex, orderBy)
-#    try:
-#        return storeRepository.list(name, address, pageSize, pageIndex, orderBy)
-#    except:
-#        raise ApiCustomError("Store name must not be duplicated")
