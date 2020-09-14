@@ -6,3 +6,7 @@ def create(name, address):
 
 def list(name, address, pageSize, pageIndex, orderBy):
     return storeRepository.list(name, address, pageSize, pageIndex, orderBy)
+
+def update(nameStore, addressStore, storeId):
+    response = storeRepository.update(nameStore, addressStore, storeId)
+    return response

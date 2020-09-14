@@ -25,13 +25,13 @@ class EntityManager():
         self.connection = psycopg2.connect(**params)
         self.connection.autocommit = True
     
-    def executeQuery(self, query, params):
+    def executeQuery(self, query, params, fetchall=False):
         cursor = None
         try:
-            print(query)
-            print(params)
             cursor = self.connection.cursor()
             cursor.execute(query, params)
+            if fetchall:
+                return cursor.fetchall()
             return cursor.fetchone()
         finally:
             if cursor is not None:

@@ -1,4 +1,5 @@
 import psycopg2
+from PageList import PageList
 from pg_connection import EntityManager
 
 entityManager = EntityManager()
@@ -16,13 +17,25 @@ def list(name, address, pageSize, pageIndex, orderBy):
             and 
             (%(address)s is null or address like %(address)s||'%%')
         limit(%(pageSize)s + 1) offset (%(pageIndex)s * %(pageSize)s)
-    """,{'name':name, 'address':address, 'pageSize':pageSize, 'pageIndex':pageIndex})
+    """
+    ,{'name':name, 'address':address, 'pageSize':pageSize, 'pageIndex':pageIndex}, fetchall=True)
     content = []
-    print(rs)
     for item in rs:
-        content[i] = rs.resolve()
-    lastPage = true
-    if content.size > pageSize:
-        lastPage = false
+        content.append({'storeId':item[0], 'name': item[1], 'address': item[2]})
+    lastPage = True
+    if len(content) > pageSize:
+        lastPage = False
         content.removeLastElement()
-    return PageList(content, pageSize, pageIndex. lastPage)
+    dictionaryPagination = {'content':content, 'pageSize': pageSize, 'pageIndex': pageIndex+1, 'lastPage': lastPage}
+    return dictionaryPagination
+
+def update(nameStore, addressStore, storeId):
+    updateParams = (nameStore, addressStore, storeId)
+    updateQuery = """
+        UPDATE store 
+            SET name = %s
+            SET address = %s 
+        WHERE storeId = %s
+        """
+    return entityManager.executeQuery(updateQuery, updateParams)
+
