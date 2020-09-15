@@ -18,7 +18,7 @@ def createStore(body):
         response = storeService.create(body['name'], body['address'])
         return (response, 201)
     except Exception:
-        return ('bad request', 400)
+        return ('Store not created', 400)
 
 @hug.put('/stores/{storeId}')
 def updateStore(storeId, body):
@@ -26,6 +26,5 @@ def updateStore(storeId, body):
         response = storeService.update(body['nameStore'], body['addressStore'], storeId)
         return (response, 204)
     except Exception:
-        raise
-        #return ('bad request', 400)
+        return ('Store not updated', 400)
 

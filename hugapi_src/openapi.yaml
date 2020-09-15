@@ -2,19 +2,16 @@ openapi: 3.0.1
 info:
   title: ACME WORKS API - STUDY CASE
   description: '[MVP] ACME Company B2C API'
-  termsOfService: http://acme.io/terms/
+  termsOfService: http://acme.io/api/terms/
   contact:
     email: apiteam@acme.io
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 0.1.0
 externalDocs:
-  description: Find out more about Swagger
-  url: http://swagger.io
+  description: Find out more about the API
+  url: http://acme.io/api/
 servers:
-- url: https://localhost:8080/api/v1
-- url: http://localhost:8080/api/v1
+- url: http://localhost:8000/
+- url: https://localhost:8000/
 tags:
 - name: store
   description: management of store profile
@@ -32,19 +29,31 @@ paths:
       tags:
       - store
       summary: List Stores
-      operationId: app.listStore
+      operationId: listStore
       parameters:
-      - name: nameTerm
+      - name: storeId
         in: query
+        description: Store ID
+        schema:
+          type: integer
+          format: int64
+        required: false
+      - name: name
+        in: query
+        description: Store name
         schema:
           type: string
-      - name: addressTerm
+        required: false
+      - name: address
         in: query
+        description: Store address
         schema:
           type: string
+        required: false
       - name: pageSize
         in: query
         required: true
+        description: How many store to show each page
         schema:
           type: integer
           format: int64
@@ -52,14 +61,15 @@ paths:
       - name: pageIndex
         in: query
         required: true
+        description: Position of what page you are.
         schema:
           type: integer
           format: int64
-          default: 1
+          default: 0
       - name: orderBy
         in: query
         description: |
-          Syntax: [field\*Term only\*, fieldId] [asc, desc]. Example: field desc"
+          Syntax: [field \* Term only *\ , fieldId] [asc, desc]. Example: field desc
         required: true
         style: form
         explode: false
@@ -75,7 +85,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/StorePage'
         400:
-          description: Store not created
+          description: bad request
           content:
             application/json:
               schema:
@@ -85,12 +95,12 @@ paths:
       tags:
       - store
       summary: Add new Store
-      operationId: app.addStore
+      operationId: createStore
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Store'
+              $ref: '#/components/schemas/ResumeStore'
         required: true
       responses:
         201:
@@ -100,6 +110,7 @@ paths:
               schema:
                 type: integer
                 format: int64
+                description: Store ID
         400:
           description: Store not created
           content:
@@ -108,6 +119,7 @@ paths:
                 type: string
                 description: Error message
       x-codegen-request-body-name: body
+      
   /stores/{storeId}:
     put:
       tags:
@@ -125,20 +137,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Store'
+              $ref: '#/components/schemas/ResumeStore'
         required: true
       responses:
-        204:
-          description: Store updated
-          content: {}
+        201:
+          description: Store created
+          content:
+            application/json:
+              schema:
+                type: integer
+                format: int64
+                description: Store ID
         400:
-          description: Store not created
+          description: Store not updated
           content:
             application/json:
               schema:
                 type: string
                 description: Error message
       x-codegen-request-body-name: body
+      
   /stores/{storeId}/items:
     get:
       tags:
@@ -263,6 +281,15 @@ components:
           type: integer
           format: int64
           example: 2023443219
+        name:
+          type: string
+          example: ACME Peba Master ltda
+        address:
+          type: string
+          example: rua bolinha peba, nº 100, uberlundia MG
+    ResumeStore:
+      type: object
+      properties:
         name:
           type: string
           example: ACME Peba Master ltda
@@ -394,7 +421,7 @@ components:
         id:
           type: integer
           format: int64
-        petId:
+        storeId:
           type: integer
           format: int64
         quantity:
@@ -459,43 +486,6 @@ components:
           type: string
       xml:
         name: Tag
-    Pet:
-      required:
-      - name
-      - photoUrls
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        category:
-          $ref: '#/components/schemas/Category'
-        name:
-          type: string
-          example: doggie
-        photoUrls:
-          type: array
-          xml:
-            name: photoUrl
-            wrapped: true
-          items:
-            type: string
-        tags:
-          type: array
-          xml:
-            name: tag
-            wrapped: true
-          items:
-            $ref: '#/components/schemas/Tag'
-        status:
-          type: string
-          description: pet status in the store
-          enum:
-          - available
-          - pending
-          - sold
-      xml:
-        name: Pet
     ApiResponse:
       type: object
       properties:
@@ -565,6 +555,3 @@ components:
       type: apiKey
       name: api_key
       in: header
-
-
-
