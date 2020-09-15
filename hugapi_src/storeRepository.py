@@ -33,9 +33,9 @@ def update(nameStore, addressStore, storeId):
     updateParams = (nameStore, addressStore, storeId)
     updateQuery = """
         UPDATE store 
-            SET name = %s
-            SET address = %s 
-        WHERE storeId = %s
+            SET name = %s, address = %s 
+        WHERE store_id = %s
+        RETURNING store_id;
         """
     return entityManager.executeQuery(updateQuery, updateParams)
 
