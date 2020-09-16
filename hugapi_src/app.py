@@ -1,13 +1,10 @@
 import storeService
 import hug
 
-@hug.get('/stores', examples='nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderBy=name%20desc')
-def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIndex=0, orderBy='name asc'):
+@hug.get('/stores', examples='nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderByTerm=storeId&orderByAscOrDesc=asc')
+def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIndex=0, orderByTerm='storeId', orderByAscOrDesc='asc'):
     try:
-        pageSize = int(pageSize)
-        pageIndex = int(pageIndex)
-
-        response = storeService.list(nameTerm, addressTerm, pageSize, pageIndex, orderBy)
+        response = storeService.list(storeId, nameTerm, addressTerm, pageSize, pageIndex, orderByTerm, orderByAscOrDesc)
         return (response, 200)
     except Exception:
         return ("bad request", 400)
