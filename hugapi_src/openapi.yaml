@@ -66,17 +66,20 @@ paths:
           type: integer
           format: int64
           default: 0
-      - name: orderBy
+      - name: orderByTerm
         in: query
-        description: |
-          Syntax: [field \* Term only *\ , fieldId] [asc, desc]. Example: field desc
+        description: Order the result by ID, name or address.
         required: true
-        style: form
-        explode: false
         schema:
-          type: array
-          items:
-            type: string
+          type: string
+          enum: [storeId, name, address]
+      - name: orderByAscOrDesc
+        in: query
+        description: Arrange by crescent or decrescent the result.
+        required: true
+        schema:
+          type: string
+          enum: [asc, desc]
       responses:
         200:
           description: List of stores
