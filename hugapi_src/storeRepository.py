@@ -9,16 +9,19 @@ def create(name, address):
     createQuery = "INSERT INTO store(name, address) VALUES(%s,%s) returning store_id"
     return entityManager.executeQuery(createQuery, createParams)
 
-def list(name, address, pageSize, pageIndex, orderBy):
+def list(storeId, name, address, pageSize, pageIndex, orderByTerm, orderByAscOrDesc):
     rs = entityManager.executeQuery("""
         select * from store 
-        where 
+        where
             (%(name)s is null or name like %(name)s||'%%')
             and 
             (%(address)s is null or address like %(address)s||'%%')
+            and
+            (%(storeId)s is null or store_id  = %(storeId)s)
         limit(%(pageSize)s + 1) offset (%(pageIndex)s * %(pageSize)s)
+        ORDER BY %(orderByTerm)s %(orderByAscOrDesc)s
     """
-    ,{'name':name, 'address':address, 'pageSize':pageSize, 'pageIndex':pageIndex}, fetchall=True)
+    ,{'storeId':storeId, 'name':name, 'address':address, 'pageSize':pageSize, 'pageIndex':pageIndex, 'orderByTerm':orderByTerm, 'orderByAscOrDesc':orderByAscOrDesc}, fetchall=True)
     content = []
     for item in rs:
         content.append({'storeId':item[0], 'name': item[1], 'address': item[2]})

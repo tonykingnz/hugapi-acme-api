@@ -8,21 +8,19 @@ def list(storeId, name, address, pageSize, pageIndex, orderByTerm, orderByAscOrD
     pageIndex = int(pageIndex)
     pageSize = int(pageSize)
     if orderByTerm == 'storeId':
-        return orderByTerm = 'store_id'
+        orderByTerm = 'store_id'
     elif orderByTerm == 'name':
-        return orderByTerm = 'name'
+        orderByTerm = 'name'
     elif orderByTerm == 'address':
-        return orderByTerm = 'address'
+        orderByTerm = 'address'
     else:
-        raise Exception:
-            return ("Invalid paramter. Only storeId, name and address", 400)
+        raise Exception("Invalid paramter. Only storeId, name and address", 400)
     if orderByAscOrDesc == 'asc':
-        return orderByTerm = 'asc'
-    elif orderByAscOrDesc == 'asc':
-        return orderByTerm = 'asc'
+        orderByAscOrDesc = 'ASC'
+    elif orderByAscOrDesc == 'desc':
+        orderByAscOrDesc = 'DESC'
     else:
-        raise Exception:
-            return ("Invalid paramter. Only asc or desc", 400)
+        raise Exception("Invalid paramter. Only asc or desc", 400)
         
     return storeRepository.list(storeId, name, address, pageSize, pageIndex, orderByTerm, orderByAscOrDesc)
 

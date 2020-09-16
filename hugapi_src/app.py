@@ -7,7 +7,8 @@ def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIn
         response = storeService.list(storeId, nameTerm, addressTerm, pageSize, pageIndex, orderByTerm, orderByAscOrDesc)
         return (response, 200)
     except Exception:
-        return ("bad request", 400)
+        raise
+        #return ("bad request", 400)
 
 @hug.post('/stores')
 def createStore(body):
