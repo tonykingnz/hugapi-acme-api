@@ -1,10 +1,10 @@
 import storeService
 import hug
 
-@hug.get('/stores', examples='nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderByTerm=storeId&orderByAscOrDesc=asc')
-def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIndex=0, orderByTerm='storeId', orderByAscOrDesc='asc'):
+@hug.get('/stores', examples='nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderBy=storeI%20asc')
+def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIndex=0, orderBy='storeId asc'):
     try:
-        response = storeService.list(storeId, nameTerm, addressTerm, pageSize, pageIndex, orderByTerm, orderByAscOrDesc)
+        response = storeService.list(storeId, nameTerm, addressTerm, pageSize, pageIndex, orderBy)
         return (response, 200)
     except Exception:
         raise

@@ -66,20 +66,13 @@ paths:
           type: integer
           format: int64
           default: 0
-      - name: orderByTerm
+      - name: orderBy
         in: query
-        description: Order the result by ID, name or address.
+        description: Order the result by ID, name or address and arrange by decresing (desc) and crecenting (asc).
         required: true
         schema:
           type: string
-          enum: [storeId, name, address]
-      - name: orderByAscOrDesc
-        in: query
-        description: Arrange by crescent or decrescent the result.
-        required: true
-        schema:
-          type: string
-          enum: [asc, desc]
+          enum: [storeId asc, storeId desc, name asc, name desc, address asc, address desc]
       responses:
         200:
           description: List of stores

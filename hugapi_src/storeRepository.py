@@ -9,19 +9,27 @@ def create(name, address):
     createQuery = "INSERT INTO store(name, address) VALUES(%s,%s) returning store_id"
     return entityManager.executeQuery(createQuery, createParams)
 
-def list(storeId, name, address, pageSize, pageIndex, orderByTerm, orderByAscOrDesc):
+def list(storeId, name, address, pageSize, pageIndex, orderBy):
     rs = entityManager.executeQuery("""
         select * from store 
         where
             (%(name)s is null or name like %(name)s||'%%')
             and 
             (%(address)s is null or address like %(address)s||'%%')
-            and
-            (%(storeId)s is null or store_id  = %(storeId)s)
+            /*and
+            (%(storeId)s is null or store_id  = %(storeId)s||'%%')*/
+        
+        ORDER BY 
+            CASE WHEN %(orderBy)s='storeId asc' THEN store_id END ASC,
+            CASE WHEN %(orderBy)s='storeId desc' THEN store_id END DESC,
+            CASE WHEN %(orderBy)s='name asc' THEN name END ASC,
+            CASE WHEN %(orderBy)s='name desc' THEN name END DESC,
+            CASE WHEN %(orderBy)s='address asc' THEN address END ASC,
+            CASE WHEN %(orderBy)s='address desc' THEN address END DESC
+
         limit(%(pageSize)s + 1) offset (%(pageIndex)s * %(pageSize)s)
-        ORDER BY %(orderByTerm)s %(orderByAscOrDesc)s
     """
-    ,{'storeId':storeId, 'name':name, 'address':address, 'pageSize':pageSize, 'pageIndex':pageIndex, 'orderByTerm':orderByTerm, 'orderByAscOrDesc':orderByAscOrDesc}, fetchall=True)
+    ,{'storeId':storeId, 'name':name, 'address':address, 'pageSize':pageSize, 'pageIndex':pageIndex, 'orderBy':orderBy}, fetchall=True)
     content = []
     for item in rs:
         content.append({'storeId':item[0], 'name': item[1], 'address': item[2]})
