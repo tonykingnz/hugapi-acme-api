@@ -5,8 +5,13 @@ def create(name, address):
     return response[0]
 
 def list(storeId, name, address, pageSize, pageIndex, orderBy):
+    
+    if storeId is not None:
+        storeId = str(storeId)
+
     pageIndex = int(pageIndex)
     pageSize = int(pageSize)
+
     if orderBy == 'storeId asc':
         orderBy = 'storeId asc'
     elif orderBy == 'storeId desc':

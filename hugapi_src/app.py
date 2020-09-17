@@ -1,7 +1,7 @@
 import storeService
 import hug
 
-@hug.get('/stores', examples='nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderBy=storeI%20asc')
+@hug.get('/stores', examples='storeId=3&nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderBy=storeI%20asc')
 def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIndex=0, orderBy='storeId asc'):
     try:
         response = storeService.list(storeId, nameTerm, addressTerm, pageSize, pageIndex, orderBy)

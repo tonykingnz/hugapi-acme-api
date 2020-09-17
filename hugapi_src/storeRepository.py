@@ -16,8 +16,8 @@ def list(storeId, name, address, pageSize, pageIndex, orderBy):
             (%(name)s is null or name like %(name)s||'%%')
             and 
             (%(address)s is null or address like %(address)s||'%%')
-            /*and
-            (%(storeId)s is null or store_id  = %(storeId)s||'%%')*/
+            and
+            (%(storeId)s is null or store_id::text like %(storeId)s||'%%')
         
         ORDER BY 
             CASE WHEN %(orderBy)s='storeId asc' THEN store_id END ASC,
