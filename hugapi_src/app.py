@@ -21,7 +21,7 @@ def createStore(body):
 @hug.put('/stores/{storeId}')
 def updateStore(storeId, body):
     try:
-        response = storeService.update(body['nameStore'], body['addressStore'], storeId)
+        response = storeService.update(body['name'], body['address'], storeId)
         return (response, 204)
     except Exception:
         return ('Store not updated', 400)
