@@ -1,5 +1,10 @@
 import storeService
+import storeItemService
 import hug
+
+#
+#Store
+#
 
 @hug.get('/stores', examples='storeId=3&nameTerm=Apple%20Store&addressTerm=Infinity%20Loop&pageSize=162&pageIndex=12&orderBy=storeI%20asc')
 def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIndex=0, orderBy='storeId asc'):
@@ -26,3 +31,14 @@ def updateStore(storeId, body):
     except Exception:
         return ('Store not updated', 400)
 
+#
+#Store Items
+#
+
+@hug.post('/stores/{storeId}/items')
+def createStoreItem(storeId, body):
+    try:
+        response = storeItemService.createItem(storeId, body['name'], body['unit'], body['image'], body['category'], body['lastPrice'])
+        return (response, 201)
+    except Exception:
+        raise
