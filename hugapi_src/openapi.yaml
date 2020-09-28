@@ -219,7 +219,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StoreItem'
+              $ref: '#/components/schemas/CreateStoreItem'
         required: true
       responses:
         201:
@@ -327,6 +327,27 @@ components:
           type: integer
           format: int64
           example: 10987645634
+        name:
+          type: string
+          example: carne bolinha bovina
+        unit:
+          type: string
+          example: kg
+        image:
+          type: string
+          description: image hash
+          example: AC98BFE120D
+        category:
+          type: string
+          enum:
+          - product
+          - service
+        lastPrice:
+          type: number
+          example: 20.99
+    CreateStoreItem:
+      type: object
+      properties:
         name:
           type: string
           example: carne bolinha bovina
@@ -551,3 +572,4 @@ components:
       type: apiKey
       name: api_key
       in: header
+
