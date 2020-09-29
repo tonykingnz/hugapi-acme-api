@@ -41,4 +41,5 @@ def createStoreItem(storeId, body):
         response = storeItemService.createItem(storeId, body['name'], body['unit'], body['image'], body['category'], body['lastPrice'])
         return (response, 201)
     except Exception:
-        raise
+        return ('Bad request, may the key is dublicated', 400)
+    
