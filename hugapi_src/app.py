@@ -12,8 +12,7 @@ def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIn
         response = storeService.list(storeId, nameTerm, addressTerm, pageSize, pageIndex, orderBy)
         return (response, 200)
     except Exception:
-        raise
-        #return ("bad request", 400)
+        return ("bad request", 400)
 
 @hug.post('/stores')
 def createStore(body):
@@ -42,4 +41,13 @@ def createStoreItem(storeId, body):
         return (response, 201)
     except Exception:
         return ('Bad request, may the key is dublicated', 400)
-    
+
+@hug.get('/stores/{storeId}/items', examples='51/items?categoryTerm=service&unitTerm=kg&nameTerm=meat&pageSize=20&pageIndex=0')
+def listStore(storeId, categoryTerm, unitTerm=None, nameTerm=None, pageSize=20, pageIndex=0):
+    try:
+        response = storeItemService.list(storeId, categoryTerm, unitTerm, nameTerm, pageSize, pageIndex)
+        return (response, 200)
+    except Exception:
+        raise
+        #return ("bad request", 400)
+

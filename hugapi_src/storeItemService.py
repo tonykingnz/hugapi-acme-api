@@ -4,14 +4,13 @@ def createItem(storeId, name, unit, image, category, lastPrice):
     response = storeItemRepository.create(storeId, name, unit, image, category, lastPrice)
     return response[0]
 
-def list(storeId, name, address, pageSize, pageIndex, orderBy):
-    
-    if storeId is not None:
-        storeId = str(storeId)
-
+def list(storeId, categoryTerm, unitTerm, nameTerm, pageSize, pageIndex):
+    storeId = str(storeId)
     pageIndex = int(pageIndex)
     pageSize = int(pageSize)
 
+    '''
+    
     if orderBy == 'storeId asc':
         orderBy = 'storeId asc'
     elif orderBy == 'storeId desc':
@@ -26,8 +25,9 @@ def list(storeId, name, address, pageSize, pageIndex, orderBy):
         orderB  = 'address  desc'
     else:
         raise Exception("Invalid paramter. Only asc or desc", 400)
-        
-    return storeItemRepository.list(storeId, name, address, pageSize, pageIndex, orderBy)
+
+    '''     
+    return storeItemRepository.list(storeId, categoryTerm, unitTerm, nameTerm, pageSize, pageIndex)
 
 def update(nameStore, addressStore, storeId):
     response = storeItemRepository.update(nameStore, addressStore, storeId)

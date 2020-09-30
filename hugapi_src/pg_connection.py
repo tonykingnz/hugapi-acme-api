@@ -1,9 +1,6 @@
 import psycopg2
 from configparser import ConfigParser
 
-nameStore = "John"
-addressStore = "Street 9, State, Country"
-
 def config(filename='database.ini', section='postgresql'):
     parser = ConfigParser()
     parser.read(filename)
@@ -36,8 +33,3 @@ class EntityManager():
         finally:
             if cursor is not None:
                 cursor.close()
-
-    def create(self, nameStore, addressStore):
-        cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO store(name, address) VALUES (%s,%s) RETURNING store_id", (nameStore, addressStore))
-
