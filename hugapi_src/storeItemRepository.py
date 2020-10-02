@@ -13,29 +13,18 @@ def list(storeId, categoryTerm, unitTerm, nameTerm, pageSize, pageIndex):
     rs = entityManager.executeQuery("""
         select * from store_item 
         where
-            (category like %(categoryTerm)s||'%%')
+            (category = %(categoryTerm)s)
             and
             (%(nameTerm)s is null or name like %(nameTerm)s||'%%')
             and 
             (%(unitTerm)s is null or unit like %(unitTerm)s||'%%')
             and
-            (store_id::text like %(storeId)s||'%%')
-
-        /*
-        ORDER BY 
-            CASE WHEN %(orderBy)s='storeId asc' THEN store_id END ASC,
-            CASE WHEN %(orderBy)s='storeId desc' THEN store_id END DESC,
-            CASE WHEN %(orderBy)s='name asc' THEN name END ASC,
-            CASE WHEN %(orderBy)s='name desc' THEN name END DESC,
-            CASE WHEN %(orderBy)s='address asc' THEN address END ASC,
-            CASE WHEN %(orderBy)s='address desc' THEN address END DESC
-        */
+            (store_id::text = %(storeId)s)
 
         limit(%(pageSize)s + 1) offset (%(pageIndex)s * %(pageSize)s)
     """
     ,{'storeId':storeId, 'nameTerm':nameTerm, 'unitTerm':unitTerm, 'categoryTerm':categoryTerm, 'pageSize':pageSize, 'pageIndex':pageIndex}, fetchall=True)
     content = []
-    '''
     for item in rs:
         content.append({'storeId':item[0], 'store': item[1], 'address': item[2]})
     lastPage = True
@@ -44,8 +33,6 @@ def list(storeId, categoryTerm, unitTerm, nameTerm, pageSize, pageIndex):
         content.removeLastElement()
     dictionaryPagination = {'content':content, 'pageSize': pageSize, 'pageIndex': pageIndex+1, 'lastPage': lastPage}
     return dictionaryPagination
-    '''
-    return rs
 
 def update(nameStore, addressStore, storeId):
     updateParams = (nameStore, addressStore, storeId)
