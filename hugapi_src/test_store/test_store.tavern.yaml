@@ -1,0 +1,15 @@
+test_name: Test store create, list and update.
+
+stages:
+  - name: Create store with name and address
+    request:
+      method: POST
+      url: http://localhost:8000/stores
+      json:
+        name: ACME Peba Master ltda
+        address: rua bolinha peba, nº 100, uberlundia MG
+      
+    response: 
+      status_code: 201
+      json:
+        id: 1
