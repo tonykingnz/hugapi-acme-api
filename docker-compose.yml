@@ -2,7 +2,7 @@ version: '3'
 
 services:
     hugapi_workspace:
-        image: tonykingnz/hugapi-workspace:3.8.5-buster
+        image: tonykingnz/hugapi-workspace:3.8.6-buster
         volumes:
             - ./:/root
               #- ./hugapi_workspace:root #dont work two at same place  

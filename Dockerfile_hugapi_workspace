@@ -1,16 +1,18 @@
 FROM python:buster
 
-RUN apt-get update
-RUN apt upgrade
+RUN apt-get update -y
+RUN apt upgrade -y
 
-RUN apt install git
+RUN apt install git -y
 RUN apt install vim -y
+RUN apt install nodejs npm -y
 RUN apt-get install postgresql -y
 
 RUN pip install --upgrade pip
 
-RUN pip3 install hug -U 
+RUN pip3 install hug -U
 RUN pip install psycopg2
+RUN pip install tavern
 RUN pip install swagger-ui-bundle
 RUN pip install openapi-spec-validator
 
