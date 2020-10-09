@@ -1,3 +1,4 @@
+import json
 import storeService
 import storeItemService
 import hug
@@ -18,9 +19,13 @@ def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIn
 def createStore(body):
     try:
         response = storeService.create(body['name'], body['address'])
-        return (response, 201)
+        response_with_statuscode = {"body":str(response), "status_code": 201}
+        return json.dumps(response_with_statuscode)
+    
     except Exception:
-        return ('Store not created', 400)
+        raise
+        #response = {"message":"Store not created", "status_code": 400}
+        #return json.dumps(response)
 
 @hug.put('/stores/{storeId}')
 def updateStore(storeId, body):

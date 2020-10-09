@@ -11,8 +11,8 @@ stages:
       
     response: 
       status_code: 201
-      json:
-        id: 1
+      verify_response_with:
+        function: testing_utils:create_store_statuscode_verification
 
   - name: List stores and filter.
     request:
