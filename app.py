@@ -19,13 +19,13 @@ def listStore(storeId=None, nameTerm=None, addressTerm=None, pageSize=20, pageIn
 def createStore(body):
     try:
         response = storeService.create(body['name'], body['address'])
-        response_with_statuscode = {"body":str(response), "status_code": 201}
+        response_with_statuscode = {'body': response, 'status_code': 201}
         return json.dumps(response_with_statuscode)
     
     except Exception:
-        raise
-        #response = {"message":"Store not created", "status_code": 400}
-        #return json.dumps(response)
+        #raise
+        response = {"message":"Store not created", "status_code": 400}
+        return json.dumps(response)
 
 @hug.put('/stores/{storeId}')
 def updateStore(storeId, body):

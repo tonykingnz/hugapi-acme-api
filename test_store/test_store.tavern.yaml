@@ -6,13 +6,17 @@ stages:
       method: POST
       url: http://localhost:8000/stores
       json:
-        name: ACME Peba Master ltda
+        name: ACME Peba Master ltda (changed to test oct13 0616330 2020)
         address: rua bolinha peba, nº 100, uberlundia MG
       
     response: 
-      status_code: 201
-      verify_response_with:
-        function: testing_utils:create_store_statuscode_verification
+      status_code: 200
+      json:
+        body: 18
+        status_code: 201
+
+      #verify_response_with:
+      #function: testing_utils:create_store_statuscode_verification
 
   - name: List stores and filter.
     request:
