@@ -1,0 +1,32 @@
+[
+  {
+    "input":
+    {
+      "id": 1,
+      "address": "37.3327° N, 122.0053° W"
+    },
+    "output": 200
+  },
+  {
+    "input":
+    {
+      "id": 2,
+      "address": "New Street, 132, CA, USA"
+    },
+    "output": 200
+  },
+  {
+    "input": {
+      "id": 3,
+      "address": "Avenue 5, SP, BR"
+    },
+    "output": 200
+  },
+  {
+      "input": {
+        "id": 7,
+        "address": "Avenue 5, SP, BR"
+    },
+    "output": 404
+  }
+]

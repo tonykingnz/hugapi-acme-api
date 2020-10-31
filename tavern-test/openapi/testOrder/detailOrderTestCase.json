@@ -1,0 +1,41 @@
+[
+  {
+    "input": 2,
+    "output": {
+      "address": "New Street, 132, CA, USA",
+      "orderItems": [
+        {
+          "description": "iPhone 11 Pro 512GB Gold",
+          "quantity": 2,
+          "unitPrice": 1149.01,
+          "itemId": 1,
+          "status": "ACTIVE"
+        },
+        {
+          "description": "Apple Watch Series 5 44mm Titanium",
+          "quantity": 1,
+          "unitPrice": 899,
+          "itemId": 2,
+          "status": "ACTIVE"
+        },
+        {
+          "description": "iPad Pro 12,9 Cellular 1TB",
+          "quantity": 1,
+          "unitPrice": 1449.01,
+          "itemId": 3,
+          "status": "ACTIVE"
+        },
+        {
+          "description": "Apple Glass",
+          "quantity": 2,
+          "unitPrice": 1449.01,
+          "itemId": 4,
+          "status": "ACTIVE"
+        }
+      ],
+      "id": 2,
+      "status": "PENDING",
+      "paid": false
+    }
+  }
+]

@@ -1,6 +1,7 @@
 import json
 import storeService
 import storeItemService
+import storeOrderService
 import hug
 
 #
@@ -53,6 +54,19 @@ def listStore(storeId, categoryTerm, unitTerm=None, nameTerm=None, pageSize=20, 
         response = storeItemService.list(storeId, categoryTerm, unitTerm, nameTerm, pageSize, pageIndex)
         return (response, 200)
     except Exception:
+        #raise
+        return ("bad request", 400)
+
+#
+#Order item
+#
+
+@hug.post('/stores/{storeId}/orders')
+def orderItem(storeId, body):
+    try:
+        response= storeOrderService.orderItem(storeId, body['storeOrderId'], body['customerId'], body['confirmationDate'], body['status'], body['item'])
+        return (response, 201)
+    except Exception:
         raise
-        #return ("bad request", 400)
+        #return ("Bad request", 400)
 
