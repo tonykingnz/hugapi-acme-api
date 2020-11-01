@@ -29,6 +29,6 @@ create table if not exists orders(
 	customer_id int4 not null,
 	confirmation_date time not null,
 	status_order status_type not null,
-	item jsonb[] not null,
+	item text[] not null,
 	primary key (customer_id, store_order_id, confirmation_date)
 );
