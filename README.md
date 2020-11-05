@@ -65,11 +65,6 @@ Then exit with \q and run:
 
 The server will be up in the port 8000 of the localhost (http://localhost:8000/)
 
-### Demo Image of the Swagger UI:
-If not displaying, open the file: [SwaggerUI.pdf](https://github.com/tonykingnz/RestAPIACMECompany/blob/master/SwaggerUI.pdf)
-
-![Swagger UI Demo Image](SwaggerUI.pdf)
-
 ### Built With
 
 * [Hug - Embrace the APIs of the future](http://hug.rest/)
