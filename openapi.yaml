@@ -11,7 +11,6 @@ externalDocs:
   url: http://acme.io/api/
 servers:
 - url: http://localhost:8000/
-- url: https://localhost:8000/
 tags:
 - name: store
   description: management of store profile
@@ -19,10 +18,6 @@ tags:
   description: management of store items - products or/and services
 - name: store orders
   description: management of store orders
-- name: store order payment
-  description: management of store order's payment
-- name: store customer
-  description: managment of store customers
 paths:
   /stores:
     get:
@@ -310,16 +305,6 @@ components:
           type: integer
           format: int32
           example: 1
-    Customer:
-      type: object
-      properties:
-        customerId:
-          type: integer
-          format: int64
-        name:
-          type: string
-        address:
-          type: string
     StoreItem:
       type: object
       properties:
@@ -384,20 +369,6 @@ components:
           type: integer
           format: int32
           example: 1
-    StoreItemPricing:
-      type: object
-      properties:
-        storeItemPricingId:
-          type: integer
-          format: int64
-        storeItemId:
-          type: integer
-          format: int64
-        unitPrice:
-          type: number
-        createdAt:
-          type: string
-          format: date-time
     StoreOrderItem:
       type: object
       properties:
@@ -421,7 +392,7 @@ components:
           format: int64
         confirmationDate:
           type: string
-          format: date-time
+          example: '2004-10-19 10:23:56+02'
         status:
           type: string
           enum:
@@ -429,90 +400,8 @@ components:
           - accepted
           - rejected
         item:
-          type: array
-          items:
-            $ref: '#/components/schemas/StoreOrderItem'
-    Order:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        storeId:
-          type: integer
-          format: int64
-        quantity:
-          type: integer
-          format: int32
-        shipDate:
           type: string
-          format: date-time
-        status:
-          type: string
-          description: Order Status
-          enum:
-          - placed
-          - approved
-          - delivered
-        complete:
-          type: boolean
-          default: false
-      xml:
-        name: Order
-    Category:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
-      xml:
-        name: Category
-    User:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        username:
-          type: string
-        firstName:
-          type: string
-        lastName:
-          type: string
-        email:
-          type: string
-        password:
-          type: string
-        phone:
-          type: string
-        userStatus:
-          type: integer
-          description: User Status
-          format: int32
-      xml:
-        name: User
-    Tag:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
-      xml:
-        name: Tag
-    ApiResponse:
-      type: object
-      properties:
-        code:
-          type: integer
-          format: int32
-        type:
-          type: string
-        message:
-          type: string
+          $ref: '#/components/schemas/StoreOrderItem'
   parameters:
     pageSizeParam:
       name: pageSize
@@ -559,17 +448,3 @@ components:
         type: array
         items:
           type: string
-  securitySchemes:
-    petstore_auth:
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: http://petstore.swagger.io/oauth/dialog
-          scopes:
-            write:pets: modify pets in your account
-            read:pets: read your pets
-    api_key:
-      type: apiKey
-      name: api_key
-      in: header
-
