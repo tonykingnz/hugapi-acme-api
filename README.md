@@ -6,7 +6,7 @@ The documentation was designed using the principles of Swagger and written on it
 
 Open the [***openapi.yaml***](https://github.com/tonykingnz/hugapi-acme-api/blob/development/openapi.yaml) file on your swagger viewer of preference, or simply copy and past it text onto https://editor.swagger.io/ and see the documentation at the right side (Take care to don't change accidentally the code of the left side that you pasted from the file  [***openapi.yaml***](https://github.com/tonykingnz/hugapi-acme-api/blob/development/openapi.yaml)).
 
-You can copy the cURL command generate after using the Try button and paste in the terminal to contact the API.
+You can copy the ***cURL command*** generate after using the Try button and paste in the terminal to contact the API.
 
 ### Install:
 #### Without docker on the terminal (Not recommended, skip to docker):
