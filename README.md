@@ -9,7 +9,9 @@ Open the [***openapi.yaml***](https://github.com/tonykingnz/hugapi-acme-api/blob
 You can copy the ***cURL command*** generate after using the *Try it out* button and paste in the terminal to contact the API.
 
 Example for the Order:
-  curl -X POST "http://localhost:8000/stores/0/orders" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"storeOrderId\":0,\"customerId\":0,\"confirmationDate\":\"2004-10-19 10:23:54+02\",\"status\":\"pending\",\"item\":{\"storeItemPricingId\":10.89,\"quantity\":0.12,\"unit\":\"kg\"}}"
+
+    curl -X POST "http://localhost:8000/stores/0/orders" -H  "accept: application/json" -H  "Content-Type: application/json" -d " {\"storeOrderId\":0,\"customerId\":0,\"confirmationDate\":\"2004-10-19 10:23:54+02\",\"status\":\"pending\",\"item\":{\"storeItemPricingId\":10.89,\"quantity\":0.12,\"unit\":\"kg\"}}"
+    
 
 ### Install:
 #### Without docker on the terminal (Not recommended, skip to docker):
