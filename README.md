@@ -4,7 +4,7 @@ This project is designed to help the ACME Company have an API, that could manage
 ### Documentation of usage of the API:
 The documentation was designed using the principles of Swagger and written on its version OpenAPI 3.1.
 
-Open the ***openapi.yaml*** file on your swagger viewer of preference, or simply copy and past it text onto https://editor.swagger.io/ and see the documentation at the right side (Take care to don't change accidentally the code of the left side that you pasted from the file ***openapi.yaml***).
+Open the [***openapi.yaml***](https://github.com/tonykingnz/hugapi-acme-api/blob/development/openapi.yaml) file on your swagger viewer of preference, or simply copy and past it text onto https://editor.swagger.io/ and see the documentation at the right side (Take care to don't change accidentally the code of the left side that you pasted from the file  [***openapi.yaml***](https://github.com/tonykingnz/hugapi-acme-api/blob/development/openapi.yaml)).
 
 You can copy the cURL command generate after using the Try button and paste in the terminal to contact the API.
 
@@ -33,7 +33,7 @@ Then do all commands in the run section of Docker instructions (Maybe be slightl
 
 #### Installation using Docker:
 
-You can simply run the docker image with docker-compose:
+You can simply run the docker image with docker-compose (make sure [Docker](https://www.docker.com) is installed):
 
 > docker-compose up -d
 
@@ -69,6 +69,7 @@ The server will be up in port 8000 of the localhost (http://localhost:8000/)
 
 * [Hug - Embrace the APIs of the future](http://hug.rest/)
 * [PostgresSQL](https://www.postgresql.org)
+* [Docker](https://www.docker.com)
 * [OpenAPI 3.1 (Swagger)](https://swagger.io)
 
 ###### last updated: 2020-11-05 12:17:50 (UTC -3)
