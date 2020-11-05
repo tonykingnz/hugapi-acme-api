@@ -1,17 +1,17 @@
 # Rest API for ACME Company
-This project is designed to help the ACME Company have an API, that could manange they store, registring and creating with information like address. Also is possible to registre items for sale for each store an even procede with simple order (No payment).
+This project is designed to help the ACME Company have an API, that could manage the store, register, and creating with information like an address. Also is possible to register items for sale for each store and even proceed with simple order (No payment).
 
 ### Documentation of usage of the API:
-The documentation was desing using the principes of Swagger and writen on it version OpenAPI 3.1.
+The documentation was designed using the principles of Swagger and written on its version OpenAPI 3.1.
 
-Open the ***openapi.yaml*** file on your swagger viewer of preference, or simple copy and past it text onto https://editor.swagger.io/ and see the documentation at the right side.
+Open the ***openapi.yaml*** file on your swagger viewer of preference, or simply copy and past it text onto https://editor.swagger.io/ and see the documentation at the right side (Take care to don't change accidentally the code of the left side that you pasted from the file ***openapi.yaml***).
 
-You can copy the cURL coomand generate after usig the Try button, and paste in the terminal to contact the API.
+You can copy the cURL command generate after using the Try button and paste in the terminal to contact the API.
 
 ### Install:
-#### Witout docker on terminal (Not recomended, skip to docker):
+#### Without docker on the terminal (Not recommended, skip to docker):
 
-You must have the python lastest version installed (Lastest version tested is Python 3.8.6), and run all the following commands:
+You must have the Python lastest version installed (The lastest version tested is Python 3.8.6) and run all the following commands:
 
 > apt-get update
 
@@ -29,11 +29,11 @@ You must have the python lastest version installed (Lastest version tested is Py
 
 > pip install openapi-spec-validator
 
-Then do all commnands in run section of Docker instructions (Maybe be slight diferent to use database, take care and go at your own risk).
+Then do all commands in the run section of Docker instructions (Maybe be slightly different to use the database, take care and go at your own risk).
 
 #### Installation using Docker:
 
-You can simple run the docker image with docker-compose:
+You can simply run the docker image with docker-compose:
 
 > docker-compose up -d
 
@@ -52,7 +52,7 @@ Login into the database with ***pslq***:
 
 > psql -h hug-acme-api-store_acme-db-postgres_1 --port 5432 -d acme-db -U postgres -W
 
-*password and user*: **postgres** 
+*password and user*: **Postgres** 
 *name*: **acme-db** 
 *host*: the postgres container runining in docker (Check with docker ps the **postgres docker container** as did with the workspace [Maybe ***hug-acme-api-store_acme-db-postgres_1***])
 *port*: **5432**
@@ -63,7 +63,7 @@ Then exit with \q and run:
 
 > hug -f app.py
 
-The server will be up in the port 8000 of the localhost (http://localhost:8000/)
+The server will be up in port 8000 of the localhost (http://localhost:8000/)
 
 ### Built With
 
