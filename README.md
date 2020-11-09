@@ -57,7 +57,7 @@ Login into the database with ***pslq***:
 
 > psql -h hug-acme-api-store_acme-db-postgres_1 --port 5432 -d acme-db -U postgres -W
 
-*password and user*: **Postgres** 
+*password and user*: **postgres** 
 *name*: **acme-db** 
 *host*: the postgres container runining in docker (Check with docker ps the **postgres docker container** as did with the workspace [Maybe ***hug-acme-api-store_acme-db-postgres_1***])
 *port*: **5432**
